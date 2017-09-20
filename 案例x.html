@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .s{
+            background-color: #0086b3;
+        }
+    </style>
+</head>
+<body>
+<button id="but">点击添加</button>
+<button id="shan">点击删除</button>
+<div id="abox">
+
+    <p>aa</p>
+
+    <p>bb</p>
+
+    <p>cc</p>
+
+    <p>dd</p>
+
+    <p>gg</p>
+
+    <em>jj</em>
+
+</div>
+</body>
+<script src="../myTools.js"></script>
+<script>
+var aBut=$("#but");
+var aBox=$("#abox");
+var aShan=$("#shan");
+    function pp(){
+        var aSpan=document.createElement("span")
+        aSpan.innerHTML="haha"
+        aSpan.className="s"
+          aBox.insertBefore(aSpan,first(aBox)) //上加
+    }
+    bind(aBut,"click",pp)
+var aP=document.createElement("p")
+aP.innerHTML="wwww"
+    aBox.replaceChild(aP,last(aBox))   //替换
+
+//     aBox.removeChild(last(aBox))
+
+function shanchu(){
+    if(first(aBox)!=last(aBox)){
+        aBox.removeChild(last(aBox));  //删除
+    }
+}
+bind(aShan,"click",shanchu)
+
+</script>
+</html>

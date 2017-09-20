@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position:absolute
+        }
+    </style>
+</head>
+<body>
+
+</body>
+<script src="../myTools.js"></script>
+<script>
+var aDiv=document.createElement("div")
+document.body.appendChild(aDiv)
+//document.body.removeChild(aDiv)
+
+//var aDiv=$("#box")
+//document.onmousemove= function (ev) {
+//    ev=ev||event
+//    aDiv.style.left=ev.clientX-50+"px"
+//    aDiv.style.top=ev.clientY-50+"px"
+//}
+
+
+//var aDiv=$("#box")
+     function hua(ev) {
+        ev=ev||event
+       aDiv.style.left=ev.clientX-50+"px"
+         aDiv.style.top=ev.clientY-50+"px"
+    }
+    bind(document,"mousemove",hua)
+
+</script>
+</html>

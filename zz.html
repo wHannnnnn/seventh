@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #obox {
+            width: 100px;
+            height: 100px;
+            background-color: darkred;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="obox"></div>
+</body>
+<script>
+    var aBox=document.getElementById("obox")
+   document.onmousemove=function(ev){
+        ev =ev||event;
+        aBox.style.left=ev.clientX+"px"
+        aBox.style.top=ev.clientY+"px"
+    }
+</script>
+</html>
